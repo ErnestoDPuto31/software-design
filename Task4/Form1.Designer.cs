@@ -40,14 +40,14 @@ namespace Task4
             // 
             // btnSort
             // 
-            btnSort.Font = new System.Drawing.Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSort.Font = new System.Drawing.Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSort.Location = new Point(54, 306);
             btnSort.Name = "btnSort";
             btnSort.Size = new Size(121, 56);
             btnSort.TabIndex = 0;
             btnSort.Text = "SORT";
             btnSort.UseVisualStyleBackColor = true;
-            btnSort.Click += btnSort_Click_1;
+            btnSort.Click += btnSort_Click;
             // 
             // listBoxResult
             // 
