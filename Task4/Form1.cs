@@ -1,4 +1,5 @@
-namespace lab1
+
+namespace Task4
 {
     public partial class Form1 : Form
     {

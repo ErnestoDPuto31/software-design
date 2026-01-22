@@ -1,24 +1,28 @@
-﻿namespace lab1
-{
-	partial class Form1
-	{
-		/// <summary>
-		///  Required designer variable.
-		/// </summary>
-		private System.ComponentModel.IContainer components = null;
+﻿using System.Windows.Forms;
+using System.Xml.Linq;
+using static System.Net.Mime.MediaTypeNames;
 
-		/// <summary>
-		///  Clean up any resources being used.
-		/// </summary>
-		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-		protected override void Dispose(bool disposing)
-		{
-			if (disposing && (components != null))
-			{
-				components.Dispose();
-			}
-			base.Dispose(disposing);
-		}
+namespace Task4
+{
+    partial class Form1
+    {
+        /// <summary>
+        ///  Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        ///  Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
         #region Windows Form Designer generated code
 
@@ -36,7 +40,7 @@
             // 
             // btnSort
             // 
-            btnSort.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSort.Font = new System.Drawing.Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSort.Location = new Point(54, 306);
             btnSort.Name = "btnSort";
             btnSort.Size = new Size(121, 56);
@@ -47,9 +51,8 @@
             // 
             // listBoxResult
             // 
-            listBoxResult.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            listBoxResult.Font = new System.Drawing.Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             listBoxResult.FormattingEnabled = true;
-            listBoxResult.ItemHeight = 24;
             listBoxResult.Location = new Point(214, 70);
             listBoxResult.Name = "listBoxResult";
             listBoxResult.Size = new Size(532, 292);
@@ -58,7 +61,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new System.Drawing.Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(47, 70);
             label1.Name = "label1";
             label1.Size = new Size(133, 21);
@@ -67,9 +70,8 @@
             // 
             // listBoxOriginal
             // 
-            listBoxOriginal.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            listBoxOriginal.Font = new System.Drawing.Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             listBoxOriginal.FormattingEnabled = true;
-            listBoxOriginal.ItemHeight = 21;
             listBoxOriginal.Location = new Point(47, 103);
             listBoxOriginal.Name = "listBoxOriginal";
             listBoxOriginal.Size = new Size(140, 172);
