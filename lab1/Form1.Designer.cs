@@ -43,7 +43,7 @@
             btnSort.TabIndex = 0;
             btnSort.Text = "SORT";
             btnSort.UseVisualStyleBackColor = true;
-            btnSort.Click += btnSort_Click_1;
+            btnSort.Click += btnSort_Click;
             // 
             // listBoxResult
             // 
