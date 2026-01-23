@@ -2,70 +2,15 @@ namespace lab3
 {
     public partial class Form1 : Form
     {
-        private List<Book> bookCollection = new List<Book>();
+        private List<Books.Book> bookCollection = new List<Books.Book>();
         public Form1()
         {
             InitializeComponent();
             txtUnique.Enabled = false;
         }
 
-        public class Book
-        {
-            public string? Title { get; set; }
-            public string? Author { get; set; }
-            public virtual string Category => "Book";
-
-            public virtual string GetInfo()
-            {
-                return $"Category: {Category}\nTitle: {Title}\nAuthor: {Author}";
-            }
-        }
-
-        // Derived classes
-        public class Magazine : Book
-        {
-            public int IssueNumber { get; set; }
-            public override string Category => "Magazine";
-            public override string GetInfo()
-            {
-                return $"{base.GetInfo()}\nIssue Number: {IssueNumber}";
-            }
-        }
-        public class EBook : Book
-        {
-            public int FileSizeMB { get; set; }
-            public override string Category => "E-Book";
-
-            public override string GetInfo()
-            {
-                return $"{base.GetInfo()}\nFile Size: {FileSizeMB} MB";
-            }
-        }
-        public class TextBook : Book
-        {
-            public string? Subject { get; set; }
-            public override string Category => "Textbook";
-
-            public override string GetInfo()
-            {
-                return $"{base.GetInfo()}\nSubject: {Subject}";
-            }
-        }
-        public class AudioBook : Book
-        {
-            public int DurationMinutes { get; set; }
-            public override string Category => "Audiobook";
-
-            public override string GetInfo()
-            {
-                return $"{base.GetInfo()}\nDuration: {DurationMinutes} minutes";
-            }
-        }
-
-
-
         // METHOD TO DISPLAY BOOKS IN LISTBOX
-        private void DisplayBooks(Book[] books)
+        private void DisplayBooks(Books.Book[] books)
         {
             listBox1.Items.Clear();
 
@@ -89,7 +34,7 @@ namespace lab3
                 switch (category)
                 {
                     case "Book":
-                        var book = new Book
+                        var book = new Books.Book
                         {
                             Title = txtBookName.Text,
                             Author = txtAuthor.Text
@@ -97,7 +42,7 @@ namespace lab3
                         bookCollection.Add(book);
                         break;
                     case "Magazine":
-                        var magazine = new Magazine
+                        var magazine = new Books.Magazine
                         {
                             Title = txtBookName.Text,
                             Author = txtAuthor.Text,
@@ -106,7 +51,7 @@ namespace lab3
                         bookCollection.Add(magazine);
                         break;
                     case "E-Book":
-                        var ebook = new EBook
+                        var ebook = new Books.EBook
                         {
                             Title = txtBookName.Text,
                             Author = txtAuthor.Text,
@@ -115,7 +60,7 @@ namespace lab3
                         bookCollection.Add(ebook);
                         break;
                     case "Textbook":
-                        var textbook = new TextBook
+                        var textbook = new Books.TextBook
                         {
                             Title = txtBookName.Text,
                             Author = txtAuthor.Text,
@@ -124,7 +69,7 @@ namespace lab3
                         bookCollection.Add(textbook);
                         break;
                     case "Audiobook":
-                        var audiobook = new AudioBook
+                        var audiobook = new Books.AudioBook
                         {
                             Title = txtBookName.Text,
                             Author = txtAuthor.Text,
