@@ -1,7 +1,5 @@
 using lab5;
 using Microsoft.EntityFrameworkCore;
-using System.Threading.Tasks;
-using static lab5.Form1;
 
 namespace lab6
 {
